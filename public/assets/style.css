@@ -23,7 +23,7 @@ body{
 .hero {
   width: 100%;
   aspect-ratio: 1 / 1; /* mantém a proporção da imagem */
-  background-image: url("public/assets/img/hero.jpg");
+  background-image: url("img/hero.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -99,7 +99,7 @@ body{
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('public/assets/img/Servilo.jpg');
+  background-image: url('img/Servilo.jpg');
   background-size: cover;
   background-position: center;
   transition: transform 0.6s ease;
@@ -113,7 +113,7 @@ body{
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('public/assets/img/portfolio.jpg');
+  background-image: url('img/portfolio.jpg');
   background-size: cover;
   background-position: center;
   transition: transform 0.6s ease;
@@ -127,7 +127,7 @@ body{
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('public/assets/img/duvidas.jpg');
+  background-image: url('img/duvidas.jpg');
   background-size: cover;
   background-position: center;
   transition: transform 0.6s ease;
@@ -143,15 +143,15 @@ body{
 
 /* Coloque o caminho das suas imagens de fundo aqui */
 .card-1 {
-  background-image: url('public/assets/img/Servilo.jpg');
+  background-image: url('img/Servilo.jpg');
 }
 
 .card-2 {
-  background-image: url('public/assets/img/portfolio.jpg');
+  background-image: url('img/portfolio.jpg');
 }
 
 .card-3 {
-  background-image: url('public/assets/img/duvidas.jpg');
+  background-image: url('img/duvidas.jpg');
 }
 
 .card-content {
