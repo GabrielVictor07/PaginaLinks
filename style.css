@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.audiowide-regular {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+:root{
+    --colorPrincipal: #DE244C;
+}
+
+body{
+    background-color: black;
+}
+
+.hero {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* mantém a proporção da imagem */
+  background-image: url("public/assets/img/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+}
+
+.hero h1{
+  color: white;
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  text-align: center;
+  font-family: "Audiowide", sans-serif;
+
+  font-size: 48px;
+}
+
+.hero p{
+    font-size: 20px;
+    color: white;
+
+    padding-bottom: 15px;
+}
+
+.hero .link-impo{
+    border: solid var(--colorPrincipal) 2px;
+    padding: 5px 30px;
+    border-radius: 50px;
+    color: #DE244C;
+    font-size: 20px;
+    font-family: "Audiowide", sans-serif;
+}
+
+.card-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 50px;
+
+  font-family: "Audiowide", sans-serif;
+}
+
+.card {
+  width: 100%;
+  aspect-ratio: 2 / 1; /* Mantém proporção 400x200 */
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.4s ease; 
+}
+
+/* Remove o background-image dos cards originais */
+.card-1,
+.card-2,
+.card-3 {
+  background-image: none;
+}
+
+/* Cria o background como pseudo-elemento para poder animar */
+.card-1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('public/assets/img/Servilo.jpg');
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s ease;
+  z-index: -1;
+}
+
+.card-2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('public/assets/img/portfolio.jpg');
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s ease;
+  z-index: -1;
+}
+
+.card-3::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('public/assets/img/duvidas.jpg');
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s ease;
+  z-index: -1;
+}
+
+/* Zoom suave ao passar o mouse */
+.card-1:hover::before,
+.card-2:hover::before,
+.card-3:hover::before {
+  transform: scale(1.1);
+}
+
+/* Coloque o caminho das suas imagens de fundo aqui */
+.card-1 {
+  background-image: url('public/assets/img/Servilo.jpg');
+}
+
+.card-2 {
+  background-image: url('public/assets/img/portfolio.jpg');
+}
+
+.card-3 {
+  background-image: url('public/assets/img/duvidas.jpg');
+}
+
+.card-content {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  gap: 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.card-content-card2{
+    display: flex;
+    margin-top: 10px;
+}
+
+.card-image {
+  width: 35%;
+  height: auto;
+  object-fit: contain;
+}
+
+.card-text {
+  flex: 1;
+
+  margin-left: 20px;
+}
+
+.card-text h1{
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.1;
+    span{
+        color: #DE244C;
+    }
+}
+
+.card-text h3{
+    color: white;
+    font-size: 20px;
+    line-height: 1.1;
+}
+
+.card-text-car2{
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+}
+
+.btn-card {
+  background: #DE244C;
+  color: white;
+  padding: 2px 20px;
+  border-radius: 25px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  margin-top: 20px;
+}
+
+/* Responsivo */
+@media (max-width: 500px) {
+  .card-links {
+    max-width: 100%;
+  }
+  
+  .card {
+    padding: 15px;
+  }
+}
+
+.social-section {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-link {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(20, 0, 0, 0.8);
+  border: 2px solid rgba(255, 0, 0, 0.3);
+  border-radius: 12px;
+  color: #fff;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  background: #ff0040;
+  border-color: #ff0040;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 0, 64, 0.4);
+}
+
+.social-link svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Responsivo */
+@media (max-width: 500px) {
+  .social-section {
+    max-width: 100%;
+  }
+  
+  .social-links {
+    gap: 15px;
+  }
+  
+  .social-link {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.marquee-bar {
+  width: 100%;
+  background: #DE244C;
+  padding: 5px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 50px;
+  white-space: nowrap;
+}
+
+.marquee-content span {
+  font-size: clamp(18px, 2vw, 24px);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  font-family: "Audiowide", sans-serif;
+}
+
+body {
+  position: relative;
+  background: black;
+  min-height: 100vh;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100px;
+  background: #ff0040;
+  filter: blur(100px);
+  opacity: 0.5;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  padding: 30px 20px;
+  margin-top: 60px;
+  z-index: 1;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-content p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Responsivo */
+@media (max-width: 500px) {
+  body::after {
+    width: 90%;
+    height: 120px;
+    filter: blur(60px);
+  }
+  
+  .footer-content p {
+    font-size: 12px;
+  }
+}
